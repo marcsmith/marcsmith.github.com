@@ -1,0 +1,86 @@
+/*  html  */
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: #000;
+	color: #fff;
+	font-size: 100%;
+	margin: 50px 0px;
+	padding: 0px;
+	text-align: center;
+}
+a {
+	color: #0000ee;
+}
+a:hover {
+	color: #0000ee;
+}
+a:active, a:visited:active {
+	color: #ff0000;
+}
+a:visited {
+	color: #551a8b;
+}
+p {
+	font-size: .75em;
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	font-size: .75em;
+	margin-bottom: 1.5em;
+}
+li {
+	margin-bottom: .5em;
+}
+h1 {
+	font-size: 1.5em;
+	line-height: 1.5em;
+	margin-bottom: .75em;
+}
+h2 {
+	font-size: 1.125em;
+	line-height: 1em;
+	margin-bottom: 1em;
+}
+h3, h4, h5, h6 {
+	font-size: .75em;
+	line-height: 1.5em;
+}
+em {
+	font-style: italic;
+}
+/*  /html  */
+	
+/*  layout  */
+#wrap {
+	
+}
+#content {
+	
+}
+#main {
+	
+}
+#secondary {
+	
+}
+#footer {
+	
+}
+
+#logo {
+	
+}
+#nav {
+	
+}
+/*  /layout  */
+
+
+.group:after {
+	content: "."; 
+	display: block; 
+	height: 0; 
+	clear: both; 
+	visibility: hidden;
+}
