@@ -66,12 +66,15 @@ hr {
 	margin: 0px auto;
 }
 #content {
+	width: 990px;
 }
 #main {
-	
+	width: 820px;
 }
 #secondary {
-	
+}
+#sidebar {
+	float: right;
 }
 #footer {
 	
