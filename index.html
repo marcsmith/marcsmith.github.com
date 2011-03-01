@@ -5,7 +5,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<title>Black Text on White Background - Safari & Chrome Extensions</title>
 	<link rel="stylesheet" type="text/css" media="screen, projection" href="css/screen.css" />
-	<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js" type="text/javascript"></script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js" type="text/javascript"></script>
 	</head>
 
 <body>
@@ -22,23 +22,77 @@
 
 				<div class="group">
 					<h2><a href="https://github.com/marcsmith/btowb-safari-extension">Safari extension</a> (btowb.safariextz)</h2>
-					<img src="./img/btowb_safari_desc.png" border="0" />
+					<img src="./img/btowb_safari_desc.png" border="0" width="800" height="264" />
 				</div>
 
 				<hr />
 
 				<div class="group">
 					<h2><a href="https://github.com/marcsmith/btowb-chrome-extension">Chrome extension</a> (btowb-chrome.crx)</h2>
-					<img src="./img/btowb_chrome_desc.png" border="0" />
+					<img src="./img/btowb_chrome_desc.png" border="0" width="800" height="264" />
 				</div>
 			</div><!-- /main -->
 
 			<div id="sidebar">
-				test
+				<div id="terminal">
+					<div id="screen">
+						><span class="cursor">..</span><a href=""></a>
+					</div>
+					<div id="keyboard">
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<br />
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<div id="mouse"></div>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+						<span class="key"></span>
+					</div>
+				</div>
 			</div>
 
 		</div><!-- /content -->
 	</div><!-- /wrap -->
+
+<script type="text/javascript">
+	var foo = true;
+</script>
+<script type="text/javascript">
+	$('#screen').bind('mouseenter', function() {
+		if(foo) {
+			var wordz = 'contact me on twitter'.split('');
+			var ctr=0;
+			var cursor = $('#screen .cursor');
+			cursor.html('').css('background-color', 'transparent').css('-webkit-animation-name', 'none').removeClass('cursor');
+			var id = setTimeout(function() {
+				var inner = cursor.html();
+				cursor.html(inner+wordz[ctr]);
+				var id2 = setTimeout(arguments.callee, 100);
+				ctr++;
+				if(ctr>wordz.length) {
+					cursor.html('<a href="http://www.twitter.com/marco1313">' + inner + '</a><span class="cursor">..</span>');
+					cursor.css('-webkit-animation-name', 'pulse');
+					clearTimeout(id2);
+				}
+			}, 100);
+		}
+		foo=false;
+	});
+</script>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];

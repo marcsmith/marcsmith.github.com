@@ -4,7 +4,6 @@ body {
 	background-color: #ccc;
 	color: #000;
 	font-size: 100%;
-	margin: 20px 50px;
 	padding: 0px;
 	text-align: center;
 }
@@ -63,19 +62,135 @@ hr {
 	
 /*  layout  */
 #wrap {
-	margin: 0px auto;
+	margin: auto;
+	width: 1000px;
+	overflow: visible;
 }
 #content {
-	width: 990px;
 }
 #main {
+	float: left;
 	width: 820px;
+	margin: 10px 20px 10px 0;
 }
 #secondary {
 }
 #sidebar {
-	float: right;
+	float: left;
+	width: 140px;
+	text-align: left;
+	margin-top: 80px;
+	padding: 4px;
 }
+#sidebar a {
+	text-decoration: none;
+}
+#sidebar #terminal {
+	float: left;
+}
+#sidebar #terminal #screen {
+	float: left;
+	position: relative;
+	padding: 5px;
+	margin: 0;
+	width: 144px;
+	height: 100px;
+	background-color: #000;
+	border-left: solid 2px #000;
+	border-left: solid 2px rgba(0,0,0,0.8);
+	-webkit-box-shadow: -1px 1px 4px 2px rgba(0,0,0,0.8);
+	-moz-box-shadow: -1px 1px 4px 2px rgba(0,0,0,0.8);
+	box-shadow: -1px 1px 4px 2px rgba(0,0,0,0.8);
+	border-radius: 8px;
+	color: yellow;
+}
+#sidebar #terminal #screen a {
+	color: yellow;
+}
+#sidebar #terminal #screen a:hover {
+	text-shadow: yellow 2px 2px 2px;
+}
+#sidebar #terminal #screen .cursor {
+/*	opacity: 0; */
+	color: yellow;
+	-webkit-animation-name: pulse;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+#sidebar #terminal #screen:hover {
+/*	opacity: 1.0; */
+	-webkit-box-shadow: -1px 1px 4px 2px rgba(255,255,0,0.4);
+	border-left-color: #ff0000;
+	border-left-color: rgba(204,0,0,0.4);
+}
+#sidebar #terminal #screen .cursor {
+	width: 1px;
+	height: 20px;
+	color: yellow;
+	background-color: yellow;
+	margin-left: 3px;
+}
+#sidebar #terminal #keyboard {
+	display: none;
+	float: left;
+	width: 150px;
+	height: 32px;
+	margin-top: 4px;
+	padding-top: 4px;
+
+	-webkit-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.8);
+	-moz-box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.8);
+	box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.8);
+
+	border: solid 2px #888;
+	border-radius: 3px;
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 3px;
+	font-family: monospace;
+	font-weight: bold;
+	background-color: #ccc;
+}
+#sidebar #terminal #keyboard #mouse {
+	float: left;
+	width: 30px;
+	height: 14px;
+	border: solid 2px #888;
+	border-radius: 3px;
+	background-color: #aaa;
+	margin: -2px 7px 0 7px;
+}
+
+#sidebar #terminal #keyboard .key {
+	float: left;
+	width: 4px;
+	height: 4px;
+	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.80);
+	margin-right: 3px;
+	border: solid 1px #888;
+	border-radius: 4px;
+	margin-left: 3px;
+}
+#sidebar #terminal #keyboard .key a {
+	color: #ccc;
+}
+#sidebar #terminal #keyboard .key a:active {
+	color: yellow;
+}
+
+@-webkit-keyframes pulse {
+ from {
+   opacity: 0.0;
+ }
+ to {
+   opacity: 0.5;
+ }
+}
+
+
 #footer {
 	
 }
